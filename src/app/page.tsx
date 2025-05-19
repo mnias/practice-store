@@ -1,3 +1,4 @@
+import Brands from '@/components/main/brands/Brands';
 import Header from '@/components/main/header/Header';
 import Promotion from '@/components/main/promotion/promotion';
 
@@ -7,6 +8,7 @@ export default function Home() {
     <>
       <Header />
       <Promotion />
+      <Brands />
     </>
     // </div>
   );

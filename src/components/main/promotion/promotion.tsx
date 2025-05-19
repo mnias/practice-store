@@ -48,7 +48,6 @@ export default function Promotion() {
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
-          quality={100}
         />
       </div>
     </div>
