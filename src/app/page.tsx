@@ -1,4 +1,4 @@
-import Brands from '@/components/main/brands/Brands';
+import Brands from '@/components/main/brands/brands';
 import Header from '@/components/main/header/Header';
 import Promotion from '@/components/main/promotion/promotion';
 
