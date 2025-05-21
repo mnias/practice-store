@@ -1,7 +1,7 @@
 import Brands from '@/components/main/brands/brands';
 import Header from '@/components/main/header/Header';
-import NewArrivals from '@/components/main/new-arrivals/new-arrivals';
 import Promotion from '@/components/main/promotion/promotion';
+import ProductGroups from '@/components/main/product-groups/product-groups';
 
 export default function Home() {
   return (
@@ -10,7 +10,8 @@ export default function Home() {
       <Header />
       <Promotion />
       <Brands />
-      <NewArrivals />
+      {/* <ProductGroups productGroups={productGroups} /> */}
+      <ProductGroups />
     </>
     // </div>
   );
