@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { Product as ProductType } from '@/types/product/product.interface';
-import Image from 'next/image';
 import StarRating from '../button/star-rating';
 
 interface Props {
@@ -9,9 +9,13 @@ interface Props {
 export default function Product({ product }: Props) {
   return (
     <div className="">
-      <div className="relative h-[200px] w-[200px] cursor-pointer md:h-[300px] md:w-[300px]">
-        <Image src={product?.src} alt={`${product?.name} image`} fill className="object-cover" />
-      </div>
+      <img
+        className=""
+        src={product?.src}
+        alt={`${product?.name} image`}
+        style={{ objectFit: 'cover' }}
+        loading="lazy"
+      />
       <div className="text-bold line-clamp-2 cursor-pointer pt-2 text-[1rem] break-words md:pt-4 md:text-[1.25rem]">
         {product.name}
       </div>

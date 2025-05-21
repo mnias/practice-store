@@ -80,10 +80,10 @@ export default function ProductGroups() {
     // Add more product groups as needed
   ]);
   return (
-    <>
+    <div className="mx-auto w-full max-w-[1240px] divide-y divide-[#000]/10">
       {productGroups.map(productGroup => {
         return <ProductGroup key={productGroup.title} productGroup={productGroup} />;
       })}
-    </>
+    </div>
   );
 }
