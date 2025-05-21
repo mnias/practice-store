@@ -1,6 +1,6 @@
-import MenuItems from './MenuItems';
-import Navbar from './Navbar';
-import SearchBar from './SearchBar';
+import MenuItems from './menu-items';
+import Navbar from './navbar';
+import SearchBar from './search-bar';
 
 export default function Header() {
   return (

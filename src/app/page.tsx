@@ -1,7 +1,8 @@
 import Brands from '@/components/main/brands/brands';
-import Header from '@/components/main/header/Header';
+import Header from '@/components/main/header/header';
 import Promotion from '@/components/main/promotion/promotion';
 import ProductGroups from '@/components/main/product-groups/product-groups';
+import BrowseByDressStyle from '@/components/main/browse-by-dress-style/browse-by-dress-style';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Brands />
       {/* <ProductGroups productGroups={productGroups} /> */}
       <ProductGroups />
+      <BrowseByDressStyle />
     </>
     // </div>
   );
