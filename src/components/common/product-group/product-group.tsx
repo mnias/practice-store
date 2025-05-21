@@ -28,7 +28,7 @@ export default function ProductGroup({ productGroup }: Props) {
   }, [swiper]);
 
   return (
-    <div className="w-full py-10">
+    <div className="ml-4 w-full py-10 max-lg:ml-0">
       <div className="w-full pb-8 text-center text-3xl font-bold md:text-5xl">{productGroup.title}</div>
       <Swiper
         onSwiper={setSwiper}
@@ -58,6 +58,9 @@ export default function ProductGroup({ productGroup }: Props) {
           </SwiperSlide>
         ))}
       </Swiper>
+      <button className="mx-auto mt-6 flex h-[3.25rem] w-[13.625rem] cursor-pointer items-center justify-center rounded-[62px] border border-solid border-[#000000]/10 md:mt-9">
+        View All
+      </button>
     </div>
   );
 }
