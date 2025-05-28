@@ -3,6 +3,7 @@ import Header from '@/components/main/header/header';
 import Promotion from '@/components/main/promotion/promotion';
 import ProductGroups from '@/components/main/product-groups/product-groups';
 import BrowseByDressStyle from '@/components/main/browse-by-dress-style/browse-by-dress-style';
+import Reviews from '@/components/main/reviews/reviews';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       {/* <ProductGroups productGroups={productGroups} /> */}
       <ProductGroups />
       <BrowseByDressStyle />
+      <Reviews />
     </>
     // </div>
   );
