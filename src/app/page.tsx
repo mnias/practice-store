@@ -4,6 +4,7 @@ import Promotion from '@/components/main/promotion/promotion';
 import ProductGroups from '@/components/main/product-groups/product-groups';
 import BrowseByDressStyle from '@/components/main/browse-by-dress-style/browse-by-dress-style';
 import Reviews from '@/components/main/reviews/reviews';
+import Footer from '@/components/common/footer/footer';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProductGroups />
       <BrowseByDressStyle />
       <Reviews />
+      <Footer />
     </>
     // </div>
   );
