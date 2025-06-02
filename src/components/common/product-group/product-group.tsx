@@ -37,6 +37,8 @@ export default function ProductGroup({ productGroup }: Props) {
         observeParents={true}
         resizeObserver={true}
         updateOnWindowResize={true}
+        slidesOffsetBefore={16}
+        slidesOffsetAfter={16}
         breakpoints={{
           0: {
             slidesPerView: 1.2,
