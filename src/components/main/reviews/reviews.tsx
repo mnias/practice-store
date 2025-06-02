@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import Review from './reveiw';
+import { useState } from 'react';
 
 const reviews: ReviewType[] = [
   {
@@ -48,21 +49,36 @@ const reviews: ReviewType[] = [
 ];
 
 export default function Reviews() {
+  const [swiper, setSwiper] = useState<SwiperClass>();
+
+  const onClickPrev = () => {
+    if (swiper) {
+      swiper.slidePrev();
+    }
+  };
+
+  const onCLickNext = () => {
+    if (swiper) {
+      swiper.slideNext();
+    }
+  };
+
   return (
     <div className="flex flex-col">
       <div className="mx-6 mt-12.5 flex max-w-[1240px] flex-row justify-between md:mx-6 md:mt-[5rem] xl:mx-auto xl:w-full">
         <span className="text-5xl font-bold">OUR HAPPY CUSTOMERS</span>
         <div className="flex flex-row gap-4">
-          <button>
+          <button onClick={onClickPrev} className="cursor-pointer">
             <Image src="/arrow_left.svg" alt="previous review" width={24} height={24} />
           </button>
-          <button>
+          <button onClick={onCLickNext} className="cursor-pointer">
             <Image className="rotate-180" src="/arrow_left.svg" alt="next review" width={24} height={24} />
           </button>
         </div>
       </div>
       <div className="mt-6 md:mt-10">
         <Swiper
+          onSwiper={setSwiper}
           spaceBetween={20}
           slidesOffsetBefore={16}
           slidesOffsetAfter={16}
