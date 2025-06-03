@@ -1,6 +1,8 @@
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import { Product as ProductType } from '@/types/product/product.interface';
 import StarRating from '../button/star-rating';
+import Link from 'next/link';
 
 interface Props {
   product: ProductType;
@@ -9,16 +11,18 @@ interface Props {
 export default function Product({ product }: Props) {
   return (
     <div className="">
-      <img
-        className=""
-        src={product?.src}
-        alt={`${product?.name} image`}
-        style={{ objectFit: 'cover' }}
-        loading="lazy"
-      />
-      <div className="text-bold line-clamp-2 cursor-pointer pt-2 text-[1rem] break-words md:pt-4 md:text-[1.25rem]">
-        {product.name}
-      </div>
+      <Link href={`/product/${product.id}`}>
+        <img
+          className=""
+          src={product?.src}
+          alt={`${product?.name} image`}
+          style={{ objectFit: 'cover' }}
+          loading="lazy"
+        />
+        <div className="text-bold line-clamp-2 cursor-pointer pt-2 text-[1rem] break-words md:pt-4 md:text-[1.25rem]">
+          {product.name}
+        </div>
+      </Link>
       <div className="mt-1 flex items-center md:mt-2">
         <StarRating starRating={4.5} />
         <div className="text-xs md:text-sm">
