@@ -1,16 +1,34 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import Header from '@/components/main/header/header';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+// 변수명 충돌 해결: 'localFont' 변수명을 'satoshi'로 변경
+const satoshi = localFont({
+  src: [
+    {
+      path: '../../public/fonts/satoshi/Satoshi-Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/satoshi/Satoshi-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/satoshi/Satoshi-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/integral/Integralcf-bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-satoshi',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -32,8 +50,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} min-w-[390px] antialiased`}>
+    <html lang="en" className={`${satoshi.variable}`}>
+      {/* 두 폰트 변수 모두 클래스에 추가 */}
+      <body className={`min-w-[390px] font-satoshi antialiased`}>
         <Header />
         {children}
       </body>
