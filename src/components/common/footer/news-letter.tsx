@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function NewsLetter() {
   return (
     <div className="z-1 mx-auto w-full max-w-screen-xl px-4">
-      <div className="flex min-h-[180px] w-full flex-col items-center justify-between gap-8 rounded-[1.25rem] bg-[#000] px-6 py-8 md:flex-row md:px-16 md:py-9 lg:max-w-[1240px]">
+      <div className="flex min-h-[180px] w-full flex-col items-center justify-between gap-8 rounded-[1.25rem] bg-[#000] px-6 py-8 md:flex-row md:px-16 md:py-9 lg:max-w-[1256px]">
         <div className="flex flex-col text-3xl font-bold text-[#fff] lg:text-[2.5rem]">
           <div className="hidden lg:block">STAY UPTO DATE ABOUT</div>
           <div className="hidden lg:block">OUR LATEST OFFERS</div>

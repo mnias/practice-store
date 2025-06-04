@@ -65,7 +65,7 @@ export default function Reviews() {
 
   return (
     <div className="flex flex-col">
-      <div className="mx-6 mt-12.5 flex max-w-[1240px] flex-row justify-between md:mx-6 md:mt-[5rem] xl:mx-auto xl:w-full">
+      <div className="mx-6 mt-12.5 flex max-w-[1256px] flex-row justify-between md:mx-6 md:mt-[5rem] xl:mx-auto xl:w-full">
         <span className="text-5xl font-bold">OUR HAPPY CUSTOMERS</span>
         <div className="flex flex-row gap-4">
           <button onClick={onClickPrev} className="cursor-pointer">

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function BrowseByDressStyle() {
   return (
-    <div className="mx-auto w-full max-w-[1240px] bg-[#f0f0f0] px-6 pt-10 md:p-16">
+    <div className="mx-auto w-full max-w-[1256px] bg-[#f0f0f0] px-6 pt-10 md:p-16">
       <div className="mb-6 w-full text-center text-3xl font-bold md:mb-16 md:text-5xl">BROWSE BY DRESS STYLE</div>
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-5 md:flex-row">

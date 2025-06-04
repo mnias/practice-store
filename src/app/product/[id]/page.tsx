@@ -1,8 +1,11 @@
+import ProductCategory from '@/components/product-detail/product-category';
+import ProductDetailImages from '@/components/product-detail/product-detail-images';
+
 export default function ProductDetailPage() {
   return (
-    <div>
-      <h1>Product Detail Page</h1>
-      <p>This is the detail page for a specific product.</p>
+    <div className="mx-auto w-full max-w-[1256px] border-t border-t-black/10">
+      <ProductCategory />
+      <ProductDetailImages />
     </div>
   );
 }
