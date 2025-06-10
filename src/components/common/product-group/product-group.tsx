@@ -1,3 +1,4 @@
+'use client';
 import Product from '@/components/common/product/product';
 import { ProductGroup as ProductGroupType } from '@/types/product-group/product-group';
 import { Swiper as SwiperClass } from 'swiper';
