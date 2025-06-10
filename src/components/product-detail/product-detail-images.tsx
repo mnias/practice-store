@@ -4,10 +4,12 @@ import StarRating from '../common/button/star-rating';
 import ColorSelector from '../common/button/color-selector';
 import { useState } from 'react';
 import TextSelector from '../common/button/text-selector';
+import AmountButton from '../common/button/amount-button';
 
 export default function ProductDetailImages() {
   const [selectedColor, setSelectedColor] = useState<string>(`#4F4631`);
   const [selectedText, setSelectedText] = useState<string>(`Large`);
+  const [amount, setAmount] = useState<number>(1);
 
   return (
     <div className="mx-auto w-full">
@@ -105,6 +107,12 @@ export default function ProductDetailImages() {
               onChange={setSelectedText}
             />
             <div className="h-[1px] w-full bg-gray-10" />
+            <div className="flex flex-row gap-3 md:gap-5">
+              <div className="h-11 flex-1/3 md:h-13">
+                <AmountButton amount={amount} onChange={setAmount} />
+              </div>
+              <button className="h-11 flex-2/3 rounded-[62px] bg-black text-white md:h-13">Add to Cart</button>
+            </div>
           </div>
         </div>
       </div>
