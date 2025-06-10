@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import Header from '@/components/main/header/header';
 
 // 변수명 충돌 해결: 'localFont' 변수명을 'satoshi'로 변경
 const satoshi = localFont({
@@ -57,10 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${satoshi.variable}`}>
       {/* 두 폰트 변수 모두 클래스에 추가 */}
-      <body className={`min-w-[390px] font-satoshi antialiased`}>
-        <Header />
-        {children}
-      </body>
+      <body className={`min-w-[390px] font-satoshi antialiased`}>{children}</body>
     </html>
   );
 }
