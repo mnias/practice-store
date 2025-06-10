@@ -1,4 +1,4 @@
-import StarRating from '@/components/common/button/star-rating';
+import ReviewLook from '@/components/common/review/review-look';
 import { Review as ReviewType } from '@/types/review/review.interface';
 import React from 'react';
 
@@ -41,15 +41,10 @@ export default function Review({ review }: Props) {
 
   return (
     <div
-      className={`flex h-[10rem] w-[22.5rem] flex-col gap-3 rounded-[20px] border border-[#000]/10 p-6 transition-all duration-300 ease-in-out md:h-[15rem] md:w-[25rem] ${isBlur ? 'opacity-50 blur-sm' : 'blur-0 opacity-80'} `}
       ref={reviewRef}
+      className={`${isBlur ? 'opacity-50 blur-sm' : 'blur-0 opacity-80'} h-[10rem] w-[22.5rem] transition-all duration-300 ease-in-out md:h-[15rem] md:w-[25rem]`}
     >
-      <StarRating starRating={review.starRating} />
-      <div>
-        {review.name}
-        {review.id}
-      </div>
-      <div>{review.reviewContents}</div>
+      <ReviewLook review={review} />
     </div>
   );
 }
