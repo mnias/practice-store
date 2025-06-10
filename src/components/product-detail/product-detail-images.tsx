@@ -5,7 +5,6 @@ import ColorSelector from '../common/button/color-selector';
 import { useState } from 'react';
 import TextSelector from '../common/button/text-selector';
 import AmountButton from '../common/button/amount-button';
-import ProductDetailInfoReviewFaq from './product-detail-info-reveiw-faq';
 
 export default function ProductDetailImages() {
   const [selectedColor, setSelectedColor] = useState<string>(`#4F4631`);
@@ -116,7 +115,6 @@ export default function ProductDetailImages() {
             </div>
           </div>
         </div>
-        <ProductDetailInfoReviewFaq />
       </div>
     </div>
   );
