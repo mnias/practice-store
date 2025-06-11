@@ -8,7 +8,7 @@ interface Props {
 
 export default function ColorSelector({ colors, selectedColor, onChange }: Props) {
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex flex-wrap gap-4">
       {colors.map(color => (
         <button
           key={color}
