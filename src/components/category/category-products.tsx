@@ -87,8 +87,11 @@ export default function CategoryProducts({ title }: Props) {
 
   return (
     <div className="flex flex-1 flex-col gap-4">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row items-center justify-between">
         <div className="text-2xl font-extrabold md:text-3xl">{title}</div>
+        <button className="block md:hidden">
+          <Image src="/ic_filter.svg" alt="filter icon" width={16} height={16} />
+        </button>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
         {products.map(product => {
