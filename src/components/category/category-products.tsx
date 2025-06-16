@@ -99,9 +99,13 @@ export default function CategoryProducts({ title }: Props) {
           <CategoryFilter />
         </BottomSheet>
       </div>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {products.map(product => {
-          return <Product key={product.id} product={product} />;
+          return (
+            <div key={product.id} className="mx-auto w-full sm:max-w-none" style={{ maxWidth: '380px' }}>
+              <Product product={product} />
+            </div>
+          );
         })}
       </div>
 

@@ -7,7 +7,7 @@ export default function CatgegoryPage({ params }: { params: { category: string }
       <div className="hidden h-auto w-[295px] rounded-[20px] border border-gray-10 px-4 py-3 md:block md:px-5 md:py-4">
         <CategoryFilter />
       </div>
-      <div className="pl-4 md:pl-5">
+      <div className="flex-1 pl-4 md:pl-5">
         <CategoryProducts title={decodeURIComponent(params.category)} />
       </div>
     </div>
