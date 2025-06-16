@@ -6,9 +6,10 @@ import { useState } from 'react';
 
 interface Props {
   product: Product;
+  onClickDelete?: (productId: number) => void;
 }
 
-export default function CartProduct({ product }: Props) {
+export default function CartProduct({ product, onClickDelete }: Props) {
   const [amount, setAmount] = useState<number>(1);
 
   return (
@@ -17,7 +18,7 @@ export default function CartProduct({ product }: Props) {
       <div className="flex flex-1 flex-col">
         <div className="flex flex-row justify-between">
           <div className="line-clamp-1 text-base font-extrabold md:text-xl">{product.name}</div>
-          <button className="cursor-pointer">
+          <button className="cursor-pointer" onClick={() => onClickDelete?.(product.id)}>
             <Image src="/ic_trash_can.svg" alt="trash can icon" width={24} height={24} />
           </button>
         </div>
