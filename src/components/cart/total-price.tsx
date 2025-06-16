@@ -7,7 +7,7 @@ interface Props {
 
 export default function TotalPrice({ subtotalPrice, deliveryFee }: Props) {
   return (
-    <div className="flex flex-col gap-4 px-4 py-3 md:gap-6 md:px-6 md:py-5">
+    <div className="flex min-w-[300px] flex-col gap-4 px-4 py-3 md:gap-6 md:px-6 md:py-5">
       <div className="text-xl font-extrabold md:text-2xl">Order Summary</div>
       <div className="flex flex-col gap-4 md:gap-5">
         <div className="flex flex-row justify-between">
@@ -31,11 +31,11 @@ export default function TotalPrice({ subtotalPrice, deliveryFee }: Props) {
         </div>
       </div>
       <div className="flex flex-row gap-3">
-        <div className="flex h-[42px] flex-3/5 flex-row items-center rounded-[62px] bg-[#f0f0f0] lg:h-[48px]">
+        <div className="flex h-[42px] flex-1 flex-row items-center rounded-[62px] bg-[#f0f0f0] lg:h-[48px]">
           <Image className="mr-3 ml-4" src="/ic_letter.svg" alt="letter icon" width={24} height={24} />
-          <input className="pr-5 text-[14px] outline-0 md:text-base" placeholder="promo code" />
+          <input className="w-full bg-transparent pr-4 text-[14px] outline-0 md:text-base" placeholder="promo code" />
         </div>
-        <button className="h-[42px] flex-2/5 cursor-pointer rounded-[62px] bg-black text-[14px] font-medium text-white md:text-base lg:h-[48px]">
+        <button className="h-[42px] min-w-24 cursor-pointer rounded-[62px] bg-black text-[14px] font-medium whitespace-nowrap text-white md:w-28 md:text-base lg:h-[48px]">
           Apply
         </button>
       </div>

@@ -14,7 +14,7 @@ export default function NewsLetter() {
         <div className="flex w-full flex-col gap-[14px] md:w-auto">
           <div className="flex h-[42px] w-full flex-row items-center rounded-[62px] bg-[#fff] md:w-[22.5rem] lg:h-[48px]">
             <Image className="mr-3 ml-4" src="/ic_letter.svg" alt="letter icon" width={24} height={24} />
-            <input className="text-[14px] md:text-[16px]" placeholder="Enter your email address" />
+            <input className="pr-5 text-[14px] outline-0 md:text-[16px]" placeholder="Enter your email address" />
           </div>
           <button className="h-[42px] w-full rounded-[62px] bg-[#fff] text-[14px] font-medium md:w-[22.5rem] md:text-[16px] lg:h-[48px]">
             Subscribe to Newsletter
