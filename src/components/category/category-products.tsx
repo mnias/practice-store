@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import Product from '../common/product/product';
 import Image from 'next/image';
+import BottomSheet from '../common/modal/bottom-sheet';
+import CategoryFilter from './category-filter';
 
 interface Props {
   title: string;
@@ -84,14 +86,18 @@ const products = [
 
 export default function CategoryProducts({ title }: Props) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isBottomSheetOpen, setIsBottomSheetOpen] = useState(false);
 
   return (
     <div className="flex flex-1 flex-col gap-4">
       <div className="flex flex-row items-center justify-between">
         <div className="text-2xl font-extrabold md:text-3xl">{title}</div>
-        <button className="block md:hidden">
+        <button className="block md:hidden" onClick={() => setIsBottomSheetOpen(true)}>
           <Image src="/ic_filter.svg" alt="filter icon" width={16} height={16} />
         </button>
+        <BottomSheet isOpen={isBottomSheetOpen} onClose={() => setIsBottomSheetOpen(false)} height="medium">
+          <CategoryFilter />
+        </BottomSheet>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
         {products.map(product => {

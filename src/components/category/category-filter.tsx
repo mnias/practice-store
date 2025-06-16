@@ -48,7 +48,7 @@ export default function CategoryFilter() {
   };
 
   return (
-    <div className="flex h-auto w-[295px] flex-col gap-4">
+    <div className="flex h-full w-full flex-col gap-4">
       <div className="flex flex-row justify-between border-b border-gray-200 pb-4 text-xl font-extrabold">
         <div>Filters</div>
         <button className="cursor-pointer">
