@@ -1,3 +1,4 @@
+'use client';
 import Product from '@/components/common/product/product';
 import { ProductGroup as ProductGroupType } from '@/types/product-group/product-group';
 import { Swiper as SwiperClass } from 'swiper';
@@ -5,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   productGroup: ProductGroupType;
@@ -12,6 +14,11 @@ interface Props {
 
 export default function ProductGroup({ productGroup }: Props) {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+  const router = useRouter();
+
+  const onClickMoveCategory = () => {
+    router.push(`/category/${productGroup.title}`);
+  };
 
   // 브라우저 크기 변경 시 Swiper 업데이트
   useEffect(() => {
@@ -60,7 +67,10 @@ export default function ProductGroup({ productGroup }: Props) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="mx-auto mt-6 flex h-[3.25rem] w-[13.625rem] cursor-pointer items-center justify-center rounded-[62px] border border-solid border-[#000000]/10 md:mt-9">
+      <button
+        className="mx-auto mt-6 flex h-[3.25rem] w-[13.625rem] cursor-pointer items-center justify-center rounded-[62px] border border-solid border-[#000000]/10 md:mt-9"
+        onClick={onClickMoveCategory}
+      >
         View All
       </button>
     </div>

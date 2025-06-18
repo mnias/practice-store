@@ -89,7 +89,7 @@ const productGroups: ProductGroupType[] = [
 
 export default function ProductGroups() {
   return (
-    <div className="mx-auto w-full max-w-[1240px] divide-y divide-[#000]/10">
+    <div className="mx-auto w-full max-w-[1256px] divide-y divide-[#000]/10">
       {productGroups.map(productGroup => {
         return <ProductGroup key={productGroup.title} productGroup={productGroup} />;
       })}

@@ -9,6 +9,9 @@
   --text-4-5xl: 2.5rem; /* 40px */
   --text-5-5xl: 3.5rem; /* 56px */
   --text-custom: 2.75rem; /* 44px */
+  --color-gray-60: rgba(0, 0, 0, 0.6); /* 60% opacity */
+  --color-gray-40: rgba(0, 0, 0, 0.4); /* 40% opacity */
+  --color-gray-10: rgba(0, 0, 0, 0.1); /* 10% opacity */
 }
 
 @theme inline {
